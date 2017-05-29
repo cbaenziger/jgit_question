@@ -27,7 +27,9 @@ Caused by: org.eclipse.jgit.errors.MissingObjectException: Missing unknown 6121d
 	... 1 more
 ```
 
-I do not see the git repo having any inconsistencies (other than the branch being "unborn"?) but that is likely due to the incomplete nature of the repository.
+# Further investigation
+
+I do not see the git repo having any severe inconsistencies per `git fsck` but that is likely due to the very incomplete nature of the repository.
 ```
 clayb@laptop:/tmp/Test$ cd /tmp/Test/./git_54096211423187804262738193174874
 clayb@laptop:/tmp/Test/git_54096211423187804262738193174874$ git fsck
@@ -37,6 +39,12 @@ Checking objects: 100% (47433/47433), done.
 clayb@laptop:/tmp/Test/git_54096211423187804262738193174874$ echo $?
 0
 ```
+
+It is perhaps worth pointing out that the missing unknown `6121dc0` is the head of the master branch for this repository.
+
+Further, I have verified this failure with JGit versions:
+* 4.8.0.201705170830-rc1
+* 4.5.0.201609210915-r
 
 # References
 
