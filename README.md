@@ -51,3 +51,5 @@ Further, I have verified this failure with JGit versions:
 I have reviewed the threads which spawned:
 * [JGti Bug 466858](https://bugs.eclipse.org/bugs/show_bug.cgi?id=466858) -- this is how I found `.setBranchesToClone()`
 * [JGit Bug 488681](https://bugs.eclipse.org/bugs/show_bug.cgi?id=488681) -- this recommended `git fsck`
+
+This is to support [OOZIE-2877](https://issues.apache.org/jira/browse/OOZIE-2877) using JGit for the Git implementation.
